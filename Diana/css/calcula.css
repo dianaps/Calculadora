@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*aspectos generales: bordes y color de fondo de calculadora*/
+.calculadora { 
+    border: 3px blue ridge; 
+    width: 80%;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    background-color: #62b9b6; }
+
+/*pantalla de visualización: bordes, posición, color de fondo, estilo letra.*/
+#textoPantalla { 
+    width: 80%; 
+    text-align: right;
+    position:relative;
+    margin: 5% auto;  
+    padding: 5px 5px;
+    background-color: white; 
+    font-family: "courier new";
+    overflow: hidden;
+
+    width: 98.5%;
+    height: 70px;
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+    margin: auto;
+    padding: 5px 14px 0 0;
+    box-sizing: border-box;
+}
+
+#textoPantalla .resultado{
+    /*display:none;*/
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+/*botones normales: anchura y margen*/
+.calculadora [type=button] { 
+    width: 95px; 
+    padding: 0;
+    cursor: pointer; 
+    background: #dadce0;
+    color: #202124;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: arial,sans-serif;
+    text-align: center;
+    line-height: 34px;
+}
+
+/*botones especiales*/
+.calculadora input.largo { 
+    color:#2f4eab; 
+    width: 120px; 
+}
+
+#igual{
+    background: #4285f4;
+    color: #fff;
+    border: 1px solid #4285f4;
+}
