@@ -11,7 +11,7 @@ op="no"; //operación en curso; "no" =  sin operación.
 //mostrar número en pantalla según se va escribiendo:
 function numero(xx) { //recoge el número pulsado en el argumento.
     if (x=="0" || xi==1  ) {	// inicializar un número, 
-        pantalla.innerHTML=xx; //mostrar en pantalla
+        pantalla.innerHTML=pantalla.innerHTML+xx; //mostrar en pantalla
         x=xx; //guardar número
         if (xx==".") { //si escribimos una coma al principio del número
             pantalla.innerHTML="0."; //escribimos 0.
