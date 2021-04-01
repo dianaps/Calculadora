@@ -1,38 +1,53 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="web, html, css">
-    <meta name="description" content="Calculadoras realizadas por los alumnos Karen Bozziere, Carlos Morales y Diana P&eacute;rez.">
-    <meta name="viewport" content="width=device-width, user-escalable=no, initial-scale=1, maxinum-scale=1, minimun-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/logoITO.ico">
-    <title>Calculadora</title>
-  </head>
-  <body>
-    <header>
-      <div id="menu-principal" class="na">
-        <ul>
-          <li><a class="active inactive icon-home" href="#">Inicio</a></li>
-          <li class="dropdown">
-              <a  class="dropbtn icon-user">Karen</a>
-          </li>
-          <li class="dropdown">
-              <a  class="dropbtn icon-user">Carlos</a>
-          </li>
-          <li class="dropdown">
-              <a  class="dropbtn icon-user" href="Diana/caluladora.html">Diana</a>
-          </li>
-        </ul>
-      </div>
-    </header>
-    <div class="contenedor">
-      <div class="contenedor-text">
-        <h3>Instituto Tecnológico de Orizaba:</h3>
-        <p>Karen Bozziere Sol&iacute;s</p>
-        <p>Carlos Andr&eacute;s Morales Rosales</p>
-        <p>Diana Alejandra Pérez Sánchez</p>
-      </div>
-    </div>
-  </body>
+<html>
+    <head>
+        <title>Calculadora Diana</title>
+        <link rel="stylesheet" type="text/css" href="css/calcula.css" />
+        <script type="text/javascript" src="js/calcula.js"></script>
+    </head>
+    <body>
+        <div class="calculadora">
+            <form action="#" name="calculadora" id="calculadora">
+                <p id="textoPantalla">
+                    0
+                    <span class="resultado">
+                        0
+                    </span>
+                </p>
+                <p>
+                    <input type="button" class="largo" value="Retr" onclick="retro()"   />
+                    <input type="button" class="largo" value="CE" onclick="borradoParcial()"  />
+                    <input type="button" class="largo" value="C" onclick="borradoTotal()"  />
+                </p>
+                <p>
+                    <input type="button" value="7" onclick="numero('7')" />
+                    <input type="button" value="8" onclick="numero('8')" />
+                    <input type="button" value="9" onclick="numero('9')" />
+                    <input type="button" value="/" onclick="operar('/')"  />
+                    <input type="button" value="Raiz" onclick="raizc()" />
+                </p>
+                <p>
+                    <input type="button" value="4" onclick="numero('4')" />
+                    <input type="button" value="5" onclick="numero('5')" />
+                    <input type="button" value="6" onclick="numero('6')" />
+                    <input type="button" value="*" onclick="operar('x')" />
+                    <input type="button" value="%" onclick="porcent()" />
+                </p>
+                <p>
+                    <input type="button" value="1" onclick="numero('1')" />
+                    <input type="button" value="2" onclick="numero('2')" />
+                    <input type="button" value="3" onclick="numero('3')" />
+                    <input type="button" value="-" onclick="operar('-')" />
+                    <input type="button" value="1/x" onclick="inve()" />
+                </p>
+                <p>
+                    <input type="button" value="0" onclick="numero('0')" />
+                    <input type="button" value="+/-" onclick="opuest()" />
+                    <input type="button" value="." onclick="numero('.')" />
+                    <input type="button" value="+" onclick="operar('+')" />
+                    <input id="igual" type="button" value="=" onclick="igualar()" />
+                </p>
+            </form>
+        </div>
+    </body>
 </html>
