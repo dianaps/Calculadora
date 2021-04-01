@@ -93,6 +93,7 @@ function retro(){ //Borrar sólo el último número escrito.
     if (x=="") {x="0";} //si ya no quedan caracteres, pondremos el 0
     if (br==".") {coma=0;} //Si el caracter quitado es la coma, se permite escribirla de nuevo.
     pantalla.innerHTML=x; //mostrar resultado en pantalla	 
+    var a=document.querySelector("hola");
 }
 
 function borradoParcial() {
