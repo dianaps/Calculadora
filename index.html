@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Calculadora Diana</title>
+        <title>Calculadora</title>
         <link rel="stylesheet" type="text/css" href="css/calcula.css" />
-        <script type="text/javascript" src="js/calcula.js"></script>
+        <script type="text/javascript" src="js/calculav2.js"></script>
     </head>
     <body>
         <div class="calculadora">
             <form action="#" name="calculadora" id="calculadora">
-                <p id="textoPantalla">
-                    0
-                    <span class="resultado">
-                        0
-                    </span>
+                <p>
+                    <div id="textoPantalla"></div>
                 </p>
                 <p>
                     <input type="button" class="largo" value="Retr" onclick="retro()"   />
@@ -30,7 +27,7 @@
                     <input type="button" value="4" onclick="numero('4')" />
                     <input type="button" value="5" onclick="numero('5')" />
                     <input type="button" value="6" onclick="numero('6')" />
-                    <input type="button" value="*" onclick="operar('x')" />
+                    <input type="button" value="*" onclick="operar('*')" />
                     <input type="button" value="%" onclick="porcent()" />
                 </p>
                 <p>

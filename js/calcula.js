@@ -1,5 +1,7 @@
-window.onload = function(){ //Acciones tras cargar la página
-    pantalla=document.getElementById("textoPantalla"); //elemento pantalla de salida
+window.onload = function(){ 
+    pantalla=document.getElementById("textoPantalla");
+    ////////////////////////////////////////////////////
+    pantallaResultado=document.getElement(".resultado");
 }
 
 x="0"; //número en pantalla
@@ -7,6 +9,7 @@ xi=1; //iniciar número en pantalla: 1=si; 0=no;
 coma=0; //estado coma decimal 0=no, 1=si;
 ni=0; //número oculto o en espera.
 op="no"; //operación en curso; "no" =  sin operación.
+
 
 //mostrar número en pantalla según se va escribiendo:
 function numero(xx) { //recoge el número pulsado en el argumento.
@@ -36,11 +39,19 @@ function numero(xx) { //recoge el número pulsado en el argumento.
     xi=0 //el número está iniciado y podemos ampliarlo.
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Este código incluye operandos en la pantalla
+//document.querySelector(pantalla);
+//pantalla.innerHTML+=xx;
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function operar(s) {
-    igualar() //si hay operaciones pendientes se realizan primero
-    ni=x //ponemos el 1º número en "numero en espera" para poder escribir el segundo.
-    op=s; //guardamos tipo de operación.
-    xi=1; //inicializar pantalla.
+    igualar();
+    ni=x;
+    op=s; 
+    //se añade a la pantala////////////////////////////////////
+    pantalla.innerHTML+=s;
+    //xi=1;
 }	
 
 function igualar() {
@@ -50,6 +61,7 @@ function igualar() {
     else { //con operación pendiente resolvemos
         sl=ni+op+x; // escribimos la operación en una cadena
         sol=eval(sl) //convertimos la cadena a código y resolvemos
+        ///////////////////////////////////////////////////////
         pantalla.innerHTML=sol //mostramos la solución
         x=sol; //guardamos la solución
         op="no"; //ya no hay operaciones pendientes
@@ -97,15 +109,15 @@ function retro(){ //Borrar sólo el último número escrito.
 }
 
 function borradoParcial() {
-    pantalla.innerHTML=0; //Borrado de pantalla;
-    x=0; //Borrado indicador número pantalla.
-    coma=0;	//reiniciamos también la coma				
+    pantalla.innerHTML=0; 
+    x=0; 
+    coma=0;				
 }
 
 function borradoTotal() {
-    pantalla.innerHTML=0; //poner pantalla a 0
-    x="0"; //reiniciar número en pantalla
-    coma=0; //reiniciar estado coma decimal 
-    ni=0 //indicador de número oculto a 0;
-    op="no" //borrar operación en curso.
+    pantalla.innerHTML=0; 
+    x="0"; 
+    coma=0;  
+    ni=0;
+    op="no";
 }

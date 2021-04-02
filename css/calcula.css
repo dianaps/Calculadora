@@ -1,43 +1,32 @@
-@import url(../css/menu.css);
-
 body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: gray;
 }
 
 /*aspectos generales: bordes y color de fondo de calculadora*/
 .calculadora { 
-    border: 3px blue ridge; 
-    width: 80%;
+    width: 500px;/**/
     align-items: center;
     text-align: center;
-    margin: auto;
-    background-color: #62b9b6; }
+    margin: 50px auto;
+    background-color: #eeeeee; 
+    padding: 3.5%;
+    border-radius: 12px;
+    box-shadow: 5px 8px 8px #323232;
+}
 
 /*pantalla de visualización: bordes, posición, color de fondo, estilo letra.*/
-#textoPantalla { 
-    width: 80%; 
+#textoPantalla {
     text-align: right;
-    position:relative;
-    margin: 5% auto;  
-    padding: 5px 5px;
-    background-color: white; 
-    font-family: "courier new";
+    background-color: white;
+    font-size: larger;
     overflow: hidden;
-
     width: 98.5%;
     height: 70px;
     border: 1px solid #ebebeb;
     border-radius: 8px;
-    margin: auto;
-    padding: 5px 14px 0 0;
     box-sizing: border-box;
-}
-
-#textoPantalla .resultado{
-    /*display:none;*/
-    font-weight: bolder;
-    font-size: x-large;
 }
 
 /*botones normales: anchura y margen*/
@@ -45,24 +34,57 @@ body{
     width: 95px; 
     padding: 0;
     cursor: pointer; 
-    background: #dadce0;
-    color: #202124;
-    border: 1px solid #dadce0;
+    background-color: #393e46;
+    color: white;
+    border: 1px solid;
     border-radius: 4px;
     box-sizing: border-box;
     font-family: arial,sans-serif;
     text-align: center;
     line-height: 34px;
 }
+.calculadora [type=button]:hover { 
+    background: #595d64;
+    border:#595d64;
+    box-shadow: 0 4px #1c1e22;
+}
 
 /*botones especiales*/
 .calculadora input.largo { 
-    color:#2f4eab; 
+    color:white; 
+    background-color: #00adb5;
     width: 120px; 
+}
+.calculadora input.largo:hover { 
+    background-color: #23ccd4;
+    border:#23ccd4;
+    box-shadow: 0 4px #057177; 
+}
+/*botones zona calculadora científica*/
+.calculadora input.cientifica { 
+    color: white;
+    background-color: #222831; 
+}
+
+.calculadora input.cientifica { 
+    color: white;
+    background-color: #222831;  
+}
+
+.calculadora input.cientifica:hover { 
+    background-color: #333a46;
+    border:#333a46;
+    box-shadow: 0 4px #161a20;  
 }
 
 #igual{
     background: #4285f4;
     color: #fff;
-    border: 1px solid #4285f4;
 }
+#igual:hover{
+    background: #5c95f1;
+    border:#5c95f1;
+    box-shadow: 0 4px #256bdb;
+}
+
+
