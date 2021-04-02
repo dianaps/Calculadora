@@ -87,4 +87,14 @@ body{
     box-shadow: 0 4px #256bdb;
 }
 
+@media only screen and (max-width: 768px) {
+    .calculadora{
+        width: 100%;
+        height: 100%;
+        padding: auto;
+    }
+    p, button{
+        display: inline;
+    }
 
+}
